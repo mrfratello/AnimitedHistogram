@@ -1,0 +1,27 @@
+.histogram_box{
+    margin: 10px 0 0 10px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.histogram_box .count_order_item{
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    font-family: 'Arial Narrow', Arial;
+    font-size: 16px;
+}
+.histogram_box .count{
+    color: #4c4744;
+    line-height: 20px;
+}
+.histogram_box .year{    color: #c8022c;}
+.histogram_box .column{
+    background: #c00;
+    width: 40px;
+    height: 122px;
+    margin: 5px auto;
+}
+.histogram_box .column .blind{
+    background: #fff;
+    padding-top: 100px;
+}
