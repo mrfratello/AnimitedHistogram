@@ -1,5 +1,6 @@
 var max_valueY, // максимальное значение в данных
-    main_interval = 1000, // интервал за который должны выстроиться все колонки
+    DURING = 1000, // интервал за который должны выстроиться все колонки
+    SMOOTHNESS = 20, // сколько в секунду будет итераций повышения столбика (характеризует сглаженность анимации)
     dataArray = {
         '1998': 12,
         '1999': 22,
@@ -44,10 +45,10 @@ function create_histogram(){
 function run_animation_histogram(){
     var valueX,
         iterator,
-        interval;
+        interval = Math.floor( 1000 / SMOOTHNESS );
     for ( valueX in dataArray ){
-        iterator = Math.ceil( dataArray[valueX] / ( ( 120 * main_interval ) / 1000 ) );
-        interval = Math.floor( main_interval / ( dataArray[valueX] / iterator) );
+        var valueY = dataArray[valueX];
+        iterator = Math.ceil( valueY / ( SMOOTHNESS * DURING  / 1000 ) );
         animate_column( valueX, 0, iterator, interval);
     }
 }
@@ -83,8 +84,6 @@ $(document).ready(function(){
         function(){
             reload_histogram();
         },
-        2500
+        DURING + 1000
     );
-
-    //$('.repeat').click(reload_histogram);
 });

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Аниминорванная гистограмма: плагин с командами</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../css/histogram.css" />
+
+    <script type="text/javascript" src="../../libs/jquery.1.7.2.js"></script>
+    <script type="text/javascript" src="anim-hist.as-plugin-simple.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.histogram_box_plugin').animHist({
+                during: 1000,
+                data: {
+                    '1998': 12,
+                    '1999': 22,
+                    '2000': 22,
+                    '2001': 23,
+                    '2002': 135,
+                    '2003': 20,
+                    '2004': 151,
+                    '2005': 52,
+                    '2006': 162
+                },
+                smoothness: 40
+            });
+            $('.histogram_box_plugin_default').animHist({
+                // data: {
+                //     '1998': 12,
+                //     '1999': 22,
+                //     '2000': 22,
+                //     '2001': 23,
+                //     '2002': 135,
+                //     '2003': 20,
+                //     '2004': 151,
+                //     '2005': 52,
+                //     '2006': 162
+                // }
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        body{
+            font-family: Tahoma;
+            font-size: 14px;
+            padding: 0 0 100px;
+        }
+        .horizontal_block{
+            text-align: center;
+        }
+        .horizontal_block .histogram_box_plugin{
+            display: inline-block;
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Использование простого плагина анимированной гистограммы</h1>
+    <div class="horizontal_block">
+        <h3>Применение одной конфигурации гистограммы к нескольким элементам</h3>
+        <div class="histogram_box_plugin"></div>
+        <div class="histogram_box_plugin"></div>
+    </div>
+    <div class="horizontal_block">
+        <h3>Использование конфигураций по умолчанию</h3>
+        <div class="histogram_box_plugin_default"></div>
+    </div>
+</body>
+</html>
