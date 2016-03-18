@@ -50,8 +50,10 @@
         }
         .horizontal_block{
             text-align: center;
+            margin: 20px 0;
+            border-bottom: 2px solid #FF6600;
         }
-        .horizontal_block .histogram_box_plugin{
+        .horizontal_block .inline_block{
             display: inline-block;
             margin: 0 20px;
         }
@@ -61,12 +63,13 @@
     <h1>Использование простого плагина анимированной гистограммы</h1>
     <div class="horizontal_block">
         <h3>Применение одной конфигурации гистограммы к нескольким элементам</h3>
-        <div class="histogram_box_plugin"></div>
-        <div class="histogram_box_plugin"></div>
+        <div class="histogram_box_plugin inline_block"></div>
+        <div class="histogram_box_plugin inline_block"></div>
     </div>
     <div class="horizontal_block">
-        <h3>Использование конфигураций по умолчанию</h3>
-        <div class="histogram_box_plugin_default"></div>
+        <h3>Применение разных конфигураций к нескольким элементам</h3>
+        <div class="histogram_box_plugin_default inline_block"></div>
+        <div class="histogram_box_plugin_not_default inline_block"></div>
     </div>
 </body>
 </html>
