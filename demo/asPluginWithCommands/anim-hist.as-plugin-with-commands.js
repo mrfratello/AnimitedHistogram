@@ -107,14 +107,14 @@
                 return {
                     iteration: Math.ceil( (absolute_value * interval) / during ),
                     interval: interval
-                }
+                };
             }
         },
         defaults =  {
             during: 500,
-                data: {
+            data: {
                 '100': 120,
-                    '101': 120,
+                '101': 120,
             },
             speed_animation: 100,
             autorun: true
